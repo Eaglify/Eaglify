@@ -1,0 +1,249 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+/* Header */
+.navbar {
+  height: 75px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  background: linear-gradient(90deg, #67b4e1, #2a8826, #dd4723, #264688);
+  background-size: 300% 100%;
+  animation: gradientAnimation 15s linear infinite;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
+
+/* Logo Size */
+.logo {
+  width: 100px;
+  height: 50px;
+}
+
+/* Navbar Links */
+.navbar ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  /* gap: 55px; */
+}
+
+/* Navbar Font */
+.navbar ul li {
+  font-family: Inter;
+}
+
+/* Header */
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+  color: rgb(204, 200, 200);
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: 0.3s;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  .navbar {
+      height: 60px;
+      padding: 0 15px;
+  }
+
+  .logo {
+      width: 80px;
+      height: 40px;
+  }
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  justify-content: center;  /* Centers bars */
+  align-items: center;
+  gap: -1000px;  /* Space between bars */
+}
+
+/* Styling each bar */
+.menu-toggle div {
+  width: 30px;  /* Adjust width of bars */
+  height: 4px;  /* Adjust thickness of bars */
+  background-color: white; /* Color of bars */
+  border-radius: 5px; /* Round the edges */
+  margin: 4px 0; /* Spacing between bars */
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle.active div:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.active div:nth-child(2) {
+  opacity: 0; /* Hide middle bar */
+}
+
+.menu-toggle.active div:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .menu-toggle {
+      display: flex; /* Show menu toggle on mobile */
+  }
+
+  .navbar ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      text-align: center;
+      padding: 10px 0;
+  }
+
+  .navbar ul.active {
+      display: flex;
+  }
+
+  .navbar ul li {
+      margin: 15px 0;
+  }
+}
+
+  .navbar ul {
+    width: 50vw;  /* Set it to half of the viewport width */
+    max-width: 300px; /* Optional: Prevent it from getting too wide */
+    height: 100vh; /* Full height */
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    text-align: center;
+    z-index: 9999; /* Ensure it's on top */
+    background: linear-gradient(90deg, #67b4e1, #2a8826, #dd4723, #264688);
+    background-size: 400% 100%;
+    animation: gradientAnimation 15s linear infinite;
+  }
+
+  .navbar ul.active {
+      display: flex;
+  }
+
+  .navbar ul li {
+      margin: 15px 0;
+  }
+
+  .navbar ul li a {
+      font-size: 14px;
+  }
+}
+
+/* Responsive About Section */
+@media (max-width: 768px) {
+  .about-container {
+      flex-direction: column;
+  }
+}
+
+/* Apply gap only on larger screens */
+@media (min-width: 769px) {
+  .navbar ul {
+    gap: 55px;
+  }
+}
+
+/* Video adjustment to be centered on Mobile View */
+@media (max-width: 768px) {
+  .about-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      min-height: 70vh; /* Ensures proper vertical spacing */
+      margin-top: 50px; /* Pushes it down into the green box */
+      position: relative;
+  }
+
+  .background-video {
+      width: 90%;
+      max-width: 600px;
+      height: auto;
+      display: block;
+  }
+}
+
+/* Video adjustment to be centered on IPAD View */
+@media (max-width: 1368px) {
+  .about-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      min-height: 80vh; /* Ensures proper vertical spacing */
+      margin-top: 50px; 
+      position: relative;
+  }
+
+  .background-video {
+      width: 90%;
+      max-width: 1000px; /* Size of Video */
+      height: auto;
+      display: block;
+  }
+}
+
+/* About Section */
+.about-container {
+  position: relative;
+  width: 90%;
+  max-width: 1320px;
+  height: auto;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.background-video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+}

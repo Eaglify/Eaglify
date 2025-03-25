@@ -1,0 +1,263 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.navbar {
+    height: 65px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background: linear-gradient(to right, #67b4e1, #2a8826, #dd4723);
+    background-size: 300% 100%;
+    animation: gradientAnimation 5s linear infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0 50%; }
+}
+
+.logo {
+    width: 85px;
+    height: 70px;
+}
+
+.navbar ul {
+    display: flex;
+
+    align-items: center;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 0px 10px;
+    font-family: 'Roboto', sans-serif;
+    transition: color 0.3s ease-in-out;
+    
+}
+
+.navbar ul li a:hover {
+    color: rgb(204, 200, 200);
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .navbar {
+        height: 50px;
+        padding: 0 10px;
+    }
+
+    .logo {
+        width: 50px;
+        height: 40px;
+    }
+
+    .navbar ul {
+        gap: 5px; /* Reduce space between items */
+    }
+
+    .navbar ul li {
+        margin: 0 2px; /* Minimize margins */
+    }
+
+    .navbar ul li a {
+        font-size: 14px; /* Reduce text size */
+        padding: 0px 2px; /* Minimize padding */
+        white-space: nowrap; /* Prevents text from breaking */
+    }
+}
+
+
+.contact-section {
+    text-align: center;
+    margin-top: 5px;
+    padding: 20px;
+}
+.contact-section h1 {
+    font-size: 45px;
+    font-weight: bold;
+    color: black;
+}
+.contact-section p {
+    font-size: 17px;
+    color: black;
+    margin-top: 10px;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Default Desktop Layout */
+.send-message {
+    width: 40%;
+    background-color: #DDDDDD;
+    padding: 60px;
+    border-radius: 10px;
+    position: absolute;
+    right: 50px;
+    
+}
+
+.send-message h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.send-message input,
+.send-message textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid rgb(188, 187, 187);
+    background: none;
+    font-size: 16px;
+    padding: 5px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.send-message textarea {
+    height: 120px;
+    resize: none;
+}
+
+.send-message button {
+    background-color: #DD4723;
+    color: white;
+    font-size: 18px;
+    font-style: italic;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+}
+
+.get-in-touch {
+    width: 40%;
+    padding: 50px;
+    margin-left: 50px;
+}
+
+.get-in-touch h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: black;
+}
+
+.get-in-touch p {
+    font-size: 14px;
+    color: black;
+    margin-top: 10px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contact-info img {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.contact-info div {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info .title {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.contact-info .details {
+    font-size: 12px;
+    font-weight: italic;
+    color: gray;
+}
+
+.divider {
+    margin-top: 20px;
+    border-top: 2px solid rgb(188, 187, 187);
+    width: 100%;
+}
+
+/* Follow Us Section */
+.follow-us {
+    padding-top: 40px;
+}
+
+.follow-us h3 {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.social-icons {
+    display: flex;
+}
+
+.social-icons a {
+    margin-right: 30px;
+    padding-top: 20px;
+}
+
+.social-icons img {
+    width: 45px;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .send-message, .get-in-touch {
+        width: 90%;
+        position: static;
+        margin: 0 auto;
+        transform: none;
+        text-align: center;
+    }
+
+    .send-message {
+        margin-bottom: 20px;
+    }
+
+    .get-in-touch {
+        padding: 30px;
+        margin: 0 auto;
+    }
+
+    /* Keep contact-info layout the same as desktop */
+    .contact-info {
+        flex-direction: row; /* Keep logo beside name */
+        justify-content: flex-start; /* Align to left */
+        text-align: left;
+    }
+
+    .contact-info img {
+        margin-bottom: 10px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+}

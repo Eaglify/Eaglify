@@ -1,0 +1,285 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.navbar {
+    height: 65px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background: linear-gradient(to right, #67b4e1, #2a8826, #dd4723);
+    background-size: 300% 100%;
+    animation: gradientAnimation 5s linear infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0 50%; }
+}
+
+.logo {
+    width: 85px;
+    height: 70px;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 0px 10px;
+    font-family: 'Roboto', sans-serif;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+    color: rgb(204, 200, 200);
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .navbar {
+        height: 50px;
+        padding: 0 10px;
+    }
+
+    .logo {
+        width: 50px;
+        height: 40px;
+    }
+
+    .navbar ul {
+        gap: 5px; /* Reduce space between items */
+    }
+
+    .navbar ul li {
+        margin: 0 5px;
+    }
+
+    .navbar ul li a {
+        font-size: 14px; /* Reduce text size */
+        padding: 0px 5px;
+    }
+}
+
+.top-right-image {
+    position: absolute;
+    top: 65px; /* Same height as navbar to place it right below */
+    right: 0;
+    width: 250px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+.bottom-left-image {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 250px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+.right-side-image {
+    position: absolute;
+    top: 120px; /* Adjust so it's below the top-right image */
+    right: 80px;
+    width: 35%; /* Bigger but within the right side */
+    height: 500px; /* Maintain aspect ratio */
+    max-width: 400vh; /* Ensures it does not reach the middle */
+}
+
+/* Mobile Version (Max Width 768px) */
+@media (max-width: 768px) {
+    .top-right-image {
+        
+        width: 150px; /* Smaller for mobile */
+        top: 50px;
+    }
+
+    .bottom-left-image {
+        
+        width: 150px; /* Smaller for mobile */
+      
+    }
+
+    .right-side-image {
+        position: relative; /* Change from absolute to relative */
+        top: 5px; /* Adjust positioning */
+        right: auto; /* Remove right alignment */
+        left: auto; /* Remove left alignment */
+        width: 90%; /* Make it wider */
+        height: 50%;
+        max-width: 100%; /* Ensure it does not overflow */
+        display: block; /* Center it */
+        margin: 0 auto; /* Center it */
+    }
+}
+.join-text {
+    position: absolute;
+    top: 100px; /* Aligns with the right-side image */
+    left: 70px; /* Moves it to the left of the right-side image */
+    font-size: 80px; /* Large font */
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    color: #1e315d; /* Dark text for visibility */
+    text-align: right; /* Align text properly */
+    white-space: nowrap;
+}
+/* Mobile Version (Max Width 768px) */
+@media (max-width: 768px) {
+    .join-text {
+        position: relative; /* Remove absolute positioning for centering */
+        top: auto; /* Adjust spacing */
+        left: auto; /* Remove left positioning */
+        right: auto; /* Remove right positioning */
+        text-align: center; /* Center the text */
+        font-size: clamp(20px, 4vw, 30px); /* Ensures font size scales but doesn't exceed 20px */
+        display: block; /* Ensure proper centering */
+        width: 100%; /* Full width for centering */
+        white-space: normal; /* Allow wrapping if needed */
+        margin-top: 40px;
+    }
+}
+.apply-container {
+    position: absolute;
+    top: 210px; /* Adjust based on layout */
+    left: 130px; /* Align with "JOIN OUR TEAM!!" */
+    width: 600px; /* Container width */
+    background-color: #274687; /* Light gray background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    font-family: Arial, sans-serif;
+}
+
+.apply-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.apply-container h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.apply-container ul {
+    list-style: none; /* Remove default bullets */
+    padding-left: 0;
+}
+
+.apply-container ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.apply-container h2,
+.apply-container h3,
+.apply-container ul li {
+    color: white;
+}
+/* Mobile Version (Max Width 768px) */
+@media (max-width: 768px) {
+    .apply-container {
+        position: relative; /* Keeps it at the bottom */
+        top: auto; /* Space from bottom */
+        left: 50%; /* Centering */
+        transform: translateX(-50%); /* Adjusts centering */
+        width: 90%; /* Adjust width for mobile */
+        height: 50%;
+        max-width: 600px; /* Prevents it from being too wide */
+       
+    }
+}
+
+.join-button {
+    position: absolute;
+    bottom: 35px; /* Position at the bottom */
+    left: 300px; /* Align to the left */
+    padding: 12px 20px;
+    font-size: 18px;
+    font-style: italic; /* Make text italic */
+    font-weight: bold;
+    color: white;
+    background-color: #DD4723; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.join-button:hover {
+    background-color: rgb(156, 64, 3); 
+}
+@media (max-width: 768px) {
+    .join-button {
+        position: relative;
+        bottom: auto; /* Move closer to the bottom */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Ensure exact centering */
+        padding: 8px 16px; /* Make it smaller */
+        font-size: 14px; /* Reduce font size */
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+@media (min-width: 769px) and (max-width: 1180px) {
+
+    .right-side-image {
+        position: relative; /* Remove absolute positioning */
+        top: auto; /* Reset top positioning */
+        right: auto; /* Reset right positioning */
+        left: 50%; /* Move to the center */
+        transform: translateX(-50%); /* Adjust for perfect centering */
+        width: 60%; /* Adjust width for better fit */
+        max-width: 700px; /* Prevent it from being too large */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Ensure it behaves as a block element */
+        margin-top: 20px; /* Add spacing from the top */
+    }
+    .join-text {
+        position: relative; /* Remove fixed positioning for better flow */
+        top: auto; /* Move it towards the bottom */
+        left: auto; /* Remove left alignment */
+        right: auto; /* Remove right alignment */
+        text-align: center; /* Center the text */
+        font-size: 50px; /* Adjust font size */
+        display: block; /* Ensure it behaves as a block element */
+        width: 100%; /* Take full width for centering */
+        white-space: normal; /* Allow text wrapping if needed */
+        margin-top: 100px; /* Add spacing from the top */
+    }
+    .apply-container {
+        position: relative; /* Remove fixed positioning */
+        top: auto; /* Move it lower */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Ensure proper centering */
+        width: 100%; /* Adjust width for better fit */
+        max-width: 750px; /* Prevent it from being too wide */
+        height: auto; /* Adjust height dynamically */
+    }
+    .join-button {
+        position: relative; /* Remove absolute positioning */
+        bottom: auto; /* Adjust position for spacing */
+        left: 50%; /* Move to the center */
+        transform: translateX(-50%); /* Ensure perfect centering */
+        padding: 10px 18px; /* Slightly smaller button */
+        font-size: 16px; /* Adjust font size */
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  <!-- Add this line -->
+    <title>Contact</title>
+    <link rel="stylesheet" href="main_contact.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="main_homepage.html">
+          <img class="logo" src="assets/pic_logo.png" alt="logo"> <!-- logo -->
+        </a>
+  
+        <div class="menu-toggle" id="menu-toggle"> <!-- hamburger menu -->
+          <div></div>  <!-- Top bar -->
+          <div></div>  <!-- Middle bar -->
+          <div></div>  <!-- Bottom bar -->
+        </div>
+  
+          <ul id="menu"> <!-- hamburger menu choices-->
+            <li><a class="active" href="main_homepage.html">Homepage</a></li>
+            <li><a href="main_services.html">Services</a></li>
+            <li><a href="main_hiring.html">Hiring</a></li>
+            <li><a href="main_about.html">About</a></li>
+            <li><a href="main_contact.html">Contact</a></li>
+          </ul>
+      </nav>
+
+    <section class="contact-section">
+        <h1>CONTACT US</h1>
+        <p>If you have any questions, comments, or feedback, feel free to reach out to us. Our team is here to assist you and ensure you have the best experience possible.</p>
+    </section>
+
+    <section class="send-message">
+        <h2>Send a Message</h2>
+        <input type="text" id="name" placeholder="Name">
+        <input type="email" id="email" placeholder="Email Address">
+        <textarea id="message" placeholder="Message"></textarea> 
+        <button type="submit" class="submit-btn" id="submit-btn">SUBMIT</button>
+    </section>
+
+    <script type="module" src="main_contact_message.js"></script>
+
+    <section class="get-in-touch">
+        <h2>Get In Touch</h2>
+        <p>We’d love to hear from you! If you have any questions, need assistance, or just want to 
+        connect, feel free to reach out. You can contact us via email, phone, or connect with us 
+        on social media. We’ll get back to you as soon as possible!</p>
+        
+        <div class="contact-info">
+            <img src="assets/Address Icon.png" alt="Address">
+            <div>
+                <span class="title_address">Address</span>
+                <span class="details">Paseo, Makati</span>
+                <span class="details">Alabang, Muntinlupa</span>
+            </div>
+        </div>
+        
+        <div class="contact-info">
+            <img src="assets/PhoneNum Icon.png" alt="Phone">
+            <div>
+                <span class="title_phonenum">Phone Number</span>
+                <span class="details">+63 976 235 7200</span>
+            </div>
+        </div>
+        
+        <div class="contact-info">
+            <img src="assets/E-mail Icon.png" alt="Email">
+            <div>
+                <span class="title_email">Email</span>
+                <span class="details">eaglify5@gmail.com</span>
+                <span class="details">sabasagra02@gmail.com</span>
+            </div>
+        </div>
+
+        <div id="loading-screen" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); color: white; text-align: center; font-size: 24px; padding-top: 20%; z-index: 1000;">
+            Loading, please wait...
+        </div>
+        
+        <div class="divider"></div>
+        <section class="follow-us">
+            <h3><i>Follow Us:</i></h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/share/1C51UWNgfr/" target="_blank"><img src="assets/Facebook Icon.png" alt="Facebook"></a>
+                <a href="https://twitter.com/yourpage" target="_blank"><img src="assets/Twitter Icon.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/yourpage" target="_blank"><img src="assets/Instagram Icon.png" alt="Instagram"></a>
+            </div>
+        </section>
+    </section>
+
+    <div class="menu-overlay" id="menu-overlay"></div> <!-- linking to menu overlay -->
+    <script src="main_about_hamburger.js"></script> <!-- linking to hamburger menu js -->
+
+</body>
+</html>

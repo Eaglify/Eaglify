@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EAGLIFY</title>
+    <link rel="stylesheet" href="main_homepage.css">
+</head>
+
+<body>
+  
+    <nav class="navbar">
+        <a href="main_homepage.html">
+          <img class="logo" src="assets/pic_logo.png" alt="logo"> <!-- logo -->
+        </a>
+  
+        <div class="menu-toggle" id="menu-toggle"> <!-- hamburger menu -->
+          <div></div>  <!-- Top bar -->
+          <div></div>  <!-- Middle bar -->
+          <div></div>  <!-- Bottom bar -->
+        </div>
+  
+          <ul id="menu"> <!-- hamburger menu choices-->
+            <li><a class="active" href="main_homepage.html">Homepage</a></li>
+            <li><a href="main_services.html">Services</a></li>
+            <li><a href="main_hiring.html">Hiring</a></li>
+            <li><a href="main_about.html">About</a></li>
+            <li><a href="main_contact.html">Contact</a></li>
+          </ul>
+      </nav>
+
+      <section class="main">
+        <div class="description">
+            <h1>Insure Your Peace, <br> Secure Your Future!</h1>
+            <p>Our insurance plans offer comprehensive coverage, <br> ensuring financial security for you and your loved ones. 
+               <br> Tailored to meet diverse needs, these plans provide <br> peace of mind and stability when you need it most.
+            </p>
+            <button class="bookappointment" id="calendly-button">BOOK AN APPOINTMENT</button>
+          </div>
+    </section>
+
+    <!-- Calendly Modal -->
+    <div id="calendlyModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+            <div class="calendly-container">
+                <iframe id="calendly-iframe" src="https://calendly.com/eaglify5/30min"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Images -->
+    <section class="images">
+      <img src="assets/pic_diamond-left.png" alt="diamond-left" class="diamond-left">
+      <img src="assets/pic_bottom-left.png" alt="bottom-left" class="bottom-left">
+      <img src="assets/pic_sabas.png" alt="sabas" class="sabas">
+      <img src="assets/pic_waveblue.png" alt="waveblue" class="waveblue">
+    </section>
+
+    <div class="menu-overlay" id="menu-overlay"></div> <!-- linking to menu overlay -->
+    <script src="main_about_hamburger.js"></script> <!-- linking to hamburger menu js -->
+
+    <script src="main_homepage.js"></script>
+
+</body>
+</html>

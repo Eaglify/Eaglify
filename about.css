@@ -1,0 +1,104 @@
+body {
+    font-family: Inter, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    height: 100%;
+  }
+  
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* HEADER */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(90deg, #67b4e1, #2a8826, #dd4723, #264688);
+    background-size: 200%;
+    animation: moveGradient 20s ease infinite;
+    color: #fff;
+  }
+  
+  /* GRADIENT MOVEMENT */
+  @keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* LOGO ON LEFT NAVBAR */
+  .logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  /* HOMEPAGE, SERVICES, ABOUT, CONTACT US */
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 50px; /*spacing between homepage, services, about, contact*/
+    font-size: 16px;
+  }
+
+  .tagline {
+    text-align: center;
+  }
+
+  .video1 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: -60px;
+    position: fixed center;
+    width: 100vw;
+    height: 80vh; 
+    object-fit: cover; 
+    }
+  
+  .diamond-left {
+    position: fixed;
+    left: -190px;
+    top: 50px;
+    height: 100vh;
+    width: auto;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .diamond-right {
+    position: fixed;
+    right: -190px;
+    top: 50px;
+    height: 100vh;
+    width: auto;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .about {
+    font-size: 20px;
+    font-style: normal;
+    color:#264688;
+    padding: 5px;
+    width: 1000px;
+    text-align:center;
+    box-sizing: border-box;
+    margin: auto;
+    margin-top: 10px;
+  }
